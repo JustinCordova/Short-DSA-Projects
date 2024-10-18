@@ -1,0 +1,6 @@
+CS 114 Spring 2024
+Homework assignment
+Huffman codes and priority queues
+
+In this assignment, you will be implementing Huffman coding which is used to compress files or images to save space as well as for efficient transmission over networks. It is a variable length binary coding scheme where the code length for each symbol may be different but it has a prefix property in that no code for a symbol is a prefix of code for another symbol. This is due to the binary tree representation of Huffman coding where the leaves are the symbols and the labels (0 or 1) on the edges in the path from the root to a leaf node when concatenated gives the code for that symbol. 
+Huffman coding minimizes the expected (average) length of a code for a symbol based on the probabilities (frequencies) of using the symbol. This is done by using a greedy algorithm where in each step we merge two binary trees with 2 least frequency values into a single tree with the new frequency the sum of the frequencies of the two trees merged. Initially each symbol is a single node binary tree with its frequency. We use Java PriorityQueue (binary heap) class for identifying nodes with 2 least frequency values and replacing them with a new node.
